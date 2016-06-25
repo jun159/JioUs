@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/button_dress"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:src="@drawable/defaultavatar"/>
+
+    <Button
+        android:id="@+id/button_start_jio"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:stateListAnimator="@null"
+        android:text="Start Jio Now"
+        android:textStyle="bold" />
+
+</LinearLayout>

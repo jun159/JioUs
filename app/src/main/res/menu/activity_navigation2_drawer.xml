@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_jio"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Home" />
+        <!--<item-->
+            <!--android:id="@+id/nav_profile"-->
+            <!--android:icon="@drawable/ic_person_black_24dp"-->
+            <!--android:title="My Profile" />-->
+        <item
+            android:id="@+id/nav_activities"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Activities" />
+        <item
+            android:id="@+id/nav_badgebook"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Badge Book" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_create_game"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Create a game" />
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@drawable/ic_nature_people_black_24dp"
+            android:title="Tutorial/Scoring" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_insert_emoticon_black_24dp"
+            android:title="About JioUS" />
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:icon="@drawable/ic_group_add_black_24dp"
+            android:title="Invite Friends" />
+    </group>
+</menu>
