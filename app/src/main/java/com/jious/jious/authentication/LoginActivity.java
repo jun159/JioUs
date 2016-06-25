@@ -3,7 +3,6 @@ package com.jious.jious.authentication;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -11,21 +10,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jious.jious.R;
-import com.jious.jious.database.DatabaseUser;
-import com.jious.jious.jio.EventActivity;
-import com.jious.jious.main.NavigationActivity;
-import com.jious.jious.objects.User;
 
 /**
  * LoginActivity offers login via username/password.

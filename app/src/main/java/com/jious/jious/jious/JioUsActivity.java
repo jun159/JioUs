@@ -20,7 +20,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.jious.jious.R;
-import com.jious.jious.activity.EventActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -153,7 +152,7 @@ public class JioUsActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 d.dismiss();
-                Intent intent = new Intent(JioUsActivity.this, EventActivity.class);
+                Intent intent = new Intent(JioUsActivity.this, MatchResultActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -53,8 +53,8 @@
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
         <activity
-            android:name=".jio.EventActivity"
-            android:label="Latest Activities"
+            android:name=".jious.MatchResultActivity"
+            android:label="Match Results"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />

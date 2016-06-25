@@ -1,4 +1,4 @@
-package com.jious.jious.jio;
+package com.jious.jious.jious;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.jious.jious.R;
+import com.jious.jious.latestactivity.LatestAdapter;
 import com.jious.jious.objects.Event;
 
 import java.util.ArrayList;
@@ -17,22 +18,22 @@ import java.util.List;
 /**
  * Created by BAOJUN on 24/6/16.
  */
-public class EventActivity extends AppCompatActivity {
+public class MatchResultActivity extends AppCompatActivity {
 
     private ListView listView;
-    private ListAdapter adapter;
+    private LatestAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_event);
+        setContentView(R.layout.activity_list_latest);
         // Display back arrow in toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         List<Event> eventList = getEventList();
         listView = (ListView) findViewById(android.R.id.list);
-        adapter = new EventAdapter(this, R.layout.activity_list_event, eventList);
+        adapter = new LatestAdapter(this, R.layout.activity_list_latest, eventList);
         listView.setAdapter(adapter);
     }
 
