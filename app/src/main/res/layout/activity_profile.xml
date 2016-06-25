@@ -2,39 +2,79 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
     <LinearLayout
         android:orientation="vertical"
         android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/avatar"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="James"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:textSize="17sp"
-            android:textStyle="italic"
-            android:text="TOA PAYOH TOWN"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/dragon" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/justin" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/hdb" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Justin Wong"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textStyle="italic"
+                android:text="TOA PAYOH TOWN"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#eae9e9" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,19 +83,20 @@
             android:orientation="horizontal"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:gravity="center">
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:gravity="center"
                 android:background="@drawable/ic_equalizer_black_24dp"/>
 
             <TextView
                 android:layout_width="130dp"
                 android:layout_height="30dp"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:text="Jio Power Lv. "/>
@@ -66,7 +107,7 @@
                 android:layout_marginStart="10dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:text="5 "/>
 
         </LinearLayout>
@@ -78,19 +119,20 @@
             android:orientation="horizontal"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:gravity="center">
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:gravity="center"
                 android:background="@drawable/ic_person_black_24dp"/>
 
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:text="Rating"/>
@@ -101,7 +143,7 @@
                 android:layout_marginStart="10dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:background="@drawable/rating"/>
 
         </LinearLayout>
@@ -113,19 +155,20 @@
             android:orientation="horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:gravity="center">
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:gravity="center"
                 android:background="@drawable/ic_star_black_24dp"/>
 
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="30dp"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:text="Badges "/>
@@ -148,37 +191,45 @@
             android:orientation="horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:src="@color/red_dark"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:src="@color/red_dark"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:src="@color/red_dark"/>
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Unlock badges by playing quests"/>
+
     </LinearLayout>
 
     <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:src="@drawable/ic_create_black_24dp" />-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--android:src="@drawable/ic_create_black_24dp" />-->
 
 </android.support.design.widget.CoordinatorLayout>

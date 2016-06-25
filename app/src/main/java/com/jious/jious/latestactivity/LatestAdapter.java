@@ -2,7 +2,9 @@ package com.jious.jious.latestactivity;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,17 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jious.jious.R;
+import com.jious.jious.activity.EventActivity;
 import com.jious.jious.objects.Event;
 
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by BAOJUN on 31/5/16.
  */
 public class LatestAdapter extends ArrayAdapter<Event> {
 
-    private static final String SET_MIN_MAX = "Min Pax. %1$s            Max Pax. %2$s";
     private List<Event> eventList;
     private Context context;
 
@@ -55,7 +56,7 @@ public class LatestAdapter extends ArrayAdapter<Event> {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if(null == view) {
-            view = layoutInflater.inflate(R.layout.list_event, null);
+            view = layoutInflater.inflate(R.layout.list_latest, null);
         }
 
         final Event event = eventList.get(position);
@@ -71,6 +72,7 @@ public class LatestAdapter extends ArrayAdapter<Event> {
             final TextView textHost = (TextView) view.findViewById(R.id.text_hostname);
 
             textLocation.setText(event.getLocation());
+            Log.d("lol", event.getLocation());
             textPlayer.setText(String.valueOf(event.getCurrentCount()));
             textDay.setText(String.valueOf(event.getCurrentDay()));
             textHost.setText(event.getHost());
@@ -78,7 +80,8 @@ public class LatestAdapter extends ArrayAdapter<Event> {
             rowLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent = new Intent(context, EventActivity.class);
+                    context.startActivity(intent);
                 }
             });
 

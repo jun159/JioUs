@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/db1_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipChildren="false">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <!--<LinearLayout-->
+        <!--android:id="@+id/header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="#facc8f"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+        <!---->
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:background="@color/white"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Welcome to Toa Payoh Town!" />-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginRight="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Welcome to Toa Payoh Town!" />&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:dividerHeight="0dp"
+        android:divider="@null">
+    </ListView>
 
     <LinearLayout
+        android:id="@+id/layout_front"
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="bottom|center_horizontal"
-        android:orientation="horizontal" >
+        android:layout_height="200dp"
+        android:background="@drawable/gradientfinal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/button_jio"
@@ -28,7 +64,7 @@
             android:layout_marginRight="10dp"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:src="@drawable/profile"/>
+            android:src="@drawable/jionow"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/button_party"
@@ -37,7 +73,7 @@
             android:layout_marginBottom="10dp"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:src="@drawable/profile"/>
+            android:src="@drawable/jious"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/button_quest"
@@ -47,8 +83,7 @@
             android:layout_marginBottom="10dp"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:src="@drawable/profile"/>
-
-</LinearLayout>
+            android:src="@drawable/quest"/>
 
     </LinearLayout>
+</RelativeLayout>

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 
 import com.jious.jious.R;
 import com.jious.jious.jio.JioFragment;
+import com.jious.jious.latestactivity.LatestFragment;
 import com.jious.jious.profile.ProfileActivity;
 
 public class NavigationActivity extends AppCompatActivity
@@ -28,13 +29,15 @@ public class NavigationActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(0);
+        getSupportActionBar().setTitle("Latest Activities");
 
         toggleUser(toolbar);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment = new JioFragment();
+        Fragment fragment = new LatestFragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.container, fragment);
         ft.commit();
@@ -99,7 +102,8 @@ public class NavigationActivity extends AppCompatActivity
         Fragment fragment;
 
         if (id == R.id.nav_jio) {
-            fragment = new JioFragment();
+            fragment = new LatestFragment();
+            getSupportActionBar().setTitle("Latest Activities");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.container, fragment);
             ft.commit();

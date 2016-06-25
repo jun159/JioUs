@@ -6,12 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 
 import com.jious.jious.R;
 import com.jious.jious.authentication.LoginActivity;
-import com.jious.jious.authentication.LoginRegisterActivity;
-import com.jious.jious.authentication.PostalActivity;
 
 /**
  * StartActivity displays company logo in fullscreen mode when app startup.

@@ -1,7 +1,8 @@
-package com.jious.jious.jio;
+package com.jious.jious.jious;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.jious.jious.R;
+import com.jious.jious.activity.EventActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,7 +29,7 @@ import java.util.Locale;
 /**
  * Created by BAOJUN on 24/6/16.
  */
-public class JioActivity extends AppCompatActivity {
+public class JioUsActivity extends AppCompatActivity {
 
     private static final SimpleDateFormat DATEFORMATTER = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     private static final SimpleDateFormat TIMEFORMATTER = new SimpleDateFormat("hh:mma", Locale.getDefault());
@@ -35,10 +37,10 @@ public class JioActivity extends AppCompatActivity {
     private TextView textCategory;
     private TextView textActivity;
     private TextView textLocation;
-    private TextView textDateTime;
-    private TextView textJioDate;
+    private TextView textDateFrom;
+    private TextView textDateTo;
     private Button buttonMatch;
-//    private ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
     private Calendar calendar = Calendar.getInstance();
 
     private String startDate;
@@ -57,8 +59,8 @@ public class JioActivity extends AppCompatActivity {
         textCategory = (TextView) findViewById(R.id.text_category);
         textActivity = (TextView) findViewById(R.id.text_activity);
         textLocation = (TextView) findViewById(R.id.text_location);
-        textDateTime = (TextView) findViewById(R.id.text_dateTime);
-        textJioDate = (TextView) findViewById(R.id.text_jiodate);
+        textDateFrom = (TextView) findViewById(R.id.text_dateFrom);
+        textDateTo = (TextView) findViewById(R.id.text_dateTo);
         buttonMatch = (Button) findViewById(R.id.button_match);
 
         textCategory.setOnClickListener(new View.OnClickListener() {
@@ -85,69 +87,33 @@ public class JioActivity extends AppCompatActivity {
             }
         });
 
-        textDateTime.setOnClickListener(new View.OnClickListener() {
+        textDateFrom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDateTimePicker(true);
-                showDateTimePicker(false);
-
+                showDateTimePicker(true, textDateFrom);
+                showDateTimePicker(false, textDateFrom);
             }
         });
 
-        textJioDate.setOnClickListener(new View.OnClickListener() {
+        textDateTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDateTimePickerOnce(true);
+                showDateTimePicker(true, textDateTo);
+                showDateTimePicker(false, textDateTo);
             }
         });
 
         buttonMatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-//                progressDialog = ProgressDialog.show(JioActivity.this,
-//                        "Matching", "Please wait...", true, true);
-//                timerDelayRemoveDialog(progressDialog);
+                progressDialog = ProgressDialog.show(JioUsActivity.this,
+                        "Matching", "Please wait...", true, true);
+                timerDelayRemoveDialog(progressDialog);
             }
         });
     }
 
-    public void showDateTimePickerOnce(final boolean isStart) {
-        final Calendar currentDate = Calendar.getInstance();
-        final Calendar date = Calendar.getInstance();
-        new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                date.set(year, monthOfYear, dayOfMonth);
-                calendar.set(year, monthOfYear, dayOfMonth);
-                if(isStart) {
-                    startDate = DATEFORMATTER.format(calendar.getTime());
-                } else {
-                    endDate = DATEFORMATTER.format(calendar.getTime());
-                }
-                String dateTime = startDate + ", " + startTime;
-                textJioDate.setText(dateTime);
-                new TimePickerDialog(JioActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
-                        calendar.set(Calendar.MINUTE, minute);
-                        if(isStart) {
-                            startTime = TIMEFORMATTER.format(calendar.getTime()).replaceAll("\\.", "");
-                        } else {
-                            endTime = TIMEFORMATTER.format(calendar.getTime()).replaceAll("\\.", "");
-                        }
-                        String dateTime = startDate + ", " + startTime;
-                        textJioDate.setText(dateTime);
-                    }
-                }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false).show();
-            }
-        }, currentDate.get(Calendar.YEAR), currentDate.get(Calendar.MONTH), currentDate.get(Calendar.DATE)).show();
-    }
-
-    public void showDateTimePicker(final boolean isStart) {
+    public void showDateTimePicker(final boolean isStart, final TextView textView) {
         final Calendar currentDate = Calendar.getInstance();
         final Calendar date = Calendar.getInstance();
         new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
@@ -162,8 +128,8 @@ public class JioActivity extends AppCompatActivity {
                 }
                 String dateTime = "From    " + startDate + ", " + startTime
                         + "\nTo         " + endDate + ", " + endTime;
-                textDateTime.setText(dateTime);
-                new TimePickerDialog(JioActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                textView.setText(dateTime);
+                new TimePickerDialog(JioUsActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
@@ -175,7 +141,7 @@ public class JioActivity extends AppCompatActivity {
                         }
                         String dateTime = "From    " + startDate + ", " + startTime
                                 + "\nTo         " + endDate + ", " + endTime;
-                        textDateTime.setText(dateTime);
+                        textView.setText(dateTime);
                     }
                 }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false).show();
             }
@@ -187,7 +153,7 @@ public class JioActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 d.dismiss();
-                Intent intent = new Intent(JioActivity.this, EventActivity.class);
+                Intent intent = new Intent(JioUsActivity.this, EventActivity.class);
                 startActivity(intent);
                 finish();
             }

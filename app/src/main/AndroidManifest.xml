@@ -25,12 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".authentication.LoginRegisterActivity"
-            android:label="@null"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
             android:name=".authentication.LoginActivity"
             android:label="@null"
             android:screenOrientation="portrait"
@@ -42,18 +36,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".avatar.AvatarActivity"
-            android:label="My Avatar"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".avatar.DressActivity"
-            android:label="Dress My Jio-ee"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTop" />
         <!--<activity-->
             <!--android:name=".main.NavigationActivity"-->
             <!--android:label="Home"-->
@@ -73,6 +55,18 @@
         <activity
             android:name=".jio.EventActivity"
             android:label="Latest Activities"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".jious.JioUsActivity"
+            android:label="JioUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.EventActivity"
+            android:label="Toa Payoh Football Match"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
