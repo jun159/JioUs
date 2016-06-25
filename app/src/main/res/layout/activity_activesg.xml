@@ -8,9 +8,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Redirecting...."
+        android:text="Redirecting to www.myactivesg.com. "
         android:textColor="@android:color/black"
-        android:textSize="17sp"/>
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disclaimer: Booking and payments are handled by the respective facility providers. "
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please check event details on booking page to ensure you are booking facilaties for the right location and time slot. "
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"/>
 
     <ImageView
         android:layout_width="match_parent"

@@ -70,7 +70,7 @@ public class JioNowActivity extends AppCompatActivity {
         textCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence options[] = new CharSequence[] {"Sports", "Bla A", "Bla B"};
+                CharSequence options[] = new CharSequence[] {"Sports", "Board Games", "Music", "Dancing", "Family", "Volunteer and Charity", "Green Action"};
                 alertDialog(options, "Select Category", textCategory);
             }
         });
@@ -78,7 +78,7 @@ public class JioNowActivity extends AppCompatActivity {
         textActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence options[] = new CharSequence[] {"Badminton", "Soccer", "Tennis"};
+                CharSequence options[] = new CharSequence[] {"Badminton", "Basketball", "Futsal", "Gateball", "Hocky", "Lawn Bowl", "Netball", "Petanque", "Pickle Ball", "Squash", "Table Tennis", "Tennis", "Tennis Wall", "Volleyball"};
                 alertDialog(options, "Select Activity", textActivity);
             }
         });
