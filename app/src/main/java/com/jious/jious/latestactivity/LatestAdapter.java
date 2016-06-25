@@ -1,7 +1,6 @@
 package com.jious.jious.latestactivity;
 
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -11,12 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jious.jious.R;
 import com.jious.jious.activity.EventActivity;
-import com.jious.jious.activity.MatchActivity;
+import com.jious.jious.attendance.AttendanceActivity;
+import com.jious.jious.attendance.AttendanceFragment;
 import com.jious.jious.objects.Event;
 
 import java.util.List;
@@ -72,9 +71,12 @@ public class LatestAdapter extends ArrayAdapter<Event> {
             final TextView textLocation = (TextView) view.findViewById(R.id.text_location);
             final TextView textPlayer = (TextView) view.findViewById(R.id.text_player);
             final TextView textDay = (TextView) view.findViewById(R.id.text_days);
+            final TextView textDate = (TextView) view.findViewById(R.id.text_date);
             final ImageView imageView = (ImageView) view.findViewById(R.id.image_host);
             final TextView textHost = (TextView) view.findViewById(R.id.text_hostname);
 
+            imageView.setImageResource(event.getDrawable());
+            textDate.setText(event.getDateTime());
             textTitle.setText(event.getTitle());
             textLocation.setText(event.getLocation());
             Log.d("lol", event.getLocation());
@@ -86,7 +88,7 @@ public class LatestAdapter extends ArrayAdapter<Event> {
                 @Override
                 public void onClick(View v) {
                     if(isAdded) {
-                        Intent intent = new Intent(context, MatchActivity.class);
+                        Intent intent = new Intent(context, AttendanceActivity.class);
                         context.startActivity(intent);
                     } else {
                         Intent intent = new Intent(context, EventActivity.class);

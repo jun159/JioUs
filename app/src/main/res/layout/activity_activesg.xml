@@ -11,6 +11,7 @@
         android:text="Redirecting to www.myactivesg.com. "
         android:textColor="@android:color/black"
         android:textSize="17sp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"/>
     <TextView
         android:layout_width="match_parent"
@@ -25,11 +26,12 @@
         android:text="Please check event details on booking page to ensure you are booking facilaties for the right location and time slot. "
         android:textColor="@android:color/black"
         android:textSize="17sp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/activesg" />
 
     <Button

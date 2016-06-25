@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_jio"
             android:icon="@drawable/ic_person_black_24dp"
-            android:title="Personal Profile" />
+            android:title="Home" />
         <item
             android:id="@+id/nav_activities"
             android:icon="@drawable/activities"
@@ -15,13 +15,13 @@
             android:icon="@drawable/badgebook"
             android:title="Badge Book" />
         <item
-            android:id="@+id/nav_friends"
-            android:icon="@drawable/ic_supervisor_account_black_24dp"
-            android:title="Friends" />
-        <item
             android:id="@+id/nav_create_game"
             android:icon="@drawable/tutorialandscoring"
             android:title="Tutorial and Scoring" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="Friends" />
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_insert_emoticon_black_24dp"

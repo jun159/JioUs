@@ -151,7 +151,7 @@
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:gravity="center"
-                        android:text="4"
+                        android:text="1"
                         android:layout_marginRight="3dp"
                         android:textSize="35sp"
                         android:textStyle="bold"
@@ -187,7 +187,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="3dp"
                         android:gravity="center"
-                        android:text="3"
+                        android:text="1"
                         android:textSize="35sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"/>
@@ -231,9 +231,7 @@
                 android:src="@drawable/justin_noborder"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                app:civ_border_width="5dp"
-                app:civ_border_color="#FF000000"/>
+                android:layout_marginBottom="20dp"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -243,7 +241,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/profile"
+                android:src="@drawable/profile_kind"
                 app:civ_border_width="5dp"
                 app:civ_border_color="#f48405"/>
 
@@ -254,7 +252,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/profile"
+                android:src="@drawable/profile_troy"
                 app:civ_border_width="5dp"
                 app:civ_border_color="#2894e2"/>
 
@@ -271,7 +269,7 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:src="@drawable/profile"
+                android:src="@drawable/profile_hdb"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
@@ -286,9 +284,9 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:src="#e1e2e5"
+                android:src="@drawable/profile_3"
                 app:civ_border_width="5dp"
-                app:civ_border_color="#e1e2e5"/>
+                app:civ_border_color="#2894e2"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -297,9 +295,9 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:src="#e1e2e5"
+                android:src="@drawable/profile_pin"
                 app:civ_border_width="5dp"
-                app:civ_border_color="#e1e2e5"/>
+                app:civ_border_color="#2894e2"/>
 
         </LinearLayout>
 
@@ -314,12 +312,12 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:src="#e1e2e5"
+                android:src="@drawable/profile_2"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#e1e2e5"/>
+                app:civ_border_width="5dp"
+                app:civ_border_color="#2894e2"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"

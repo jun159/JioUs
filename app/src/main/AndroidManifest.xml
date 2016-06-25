@@ -60,13 +60,13 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".activity.EventActivity"
-            android:label="Toa Payoh Football Match"
+            android:label="Toa Payoh Soccer Match"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
         <activity
             android:name=".activity.MatchActivity"
-            android:label="Toa Payoh Football Match"
+            android:label="Toa Payoh Soccer Match"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
@@ -84,7 +84,25 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".jionow.WebsiteActivity"
-            android:label="Booking"
+            android:label="Book Facility"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".quest.QuestActivity"
+            android:label="Quest"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".quest.CommunityBadgeActivity"
+            android:label="Community Badge"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".attendance.AttendanceActivity"
+            android:label="Toa Payoh Soccer Match"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />

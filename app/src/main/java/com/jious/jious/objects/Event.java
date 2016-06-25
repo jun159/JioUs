@@ -5,6 +5,7 @@ package com.jious.jious.objects;
  */
 public class Event {
 
+    private int drawable;
     private String title;
     private String location;
     private String km;
@@ -16,9 +17,10 @@ public class Event {
     private int currentDay;
     private boolean isLiked;
 
-    public Event(String title, String location, String km, String dateTime,
+    public Event(int drawable, String title, String location, String km, String dateTime,
                  String host, int minPax, int maxPax, int currentCount,
                  int currentDay, boolean isLiked) {
+        this.drawable = drawable;
         this.title = title;
         this.location = location;
         this.km = km;
@@ -29,6 +31,14 @@ public class Event {
         this.currentCount = currentCount;
         this.currentDay = currentDay;
         this.isLiked = isLiked;
+    }
+
+    public int getDrawable() {
+        return drawable;
+    }
+
+    public void setDrawable(int drawable) {
+        this.drawable = drawable;
     }
 
     public String getTitle() {

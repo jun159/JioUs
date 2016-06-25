@@ -40,6 +40,7 @@ public class JioNowActivity extends AppCompatActivity {
     private TextView textCategory;
     private TextView textActivity;
     private TextView textDate;
+    private TextView textVenue;
     private TextView textJioDate;
     private TextView textMin;
     private TextView textMax;
@@ -62,6 +63,7 @@ public class JioNowActivity extends AppCompatActivity {
         textCategory = (TextView) findViewById(R.id.text_category);
         textActivity = (TextView) findViewById(R.id.text_activity);
         textDate = (TextView) findViewById(R.id.text_dateTime);
+        textVenue = (TextView) findViewById(R.id.text_location);
         textJioDate = (TextView) findViewById(R.id.text_jiodate);
         textMin = (TextView) findViewById(R.id.text_min);
         textMax = (TextView) findViewById(R.id.text_max);
@@ -78,8 +80,16 @@ public class JioNowActivity extends AppCompatActivity {
         textActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence options[] = new CharSequence[] {"Badminton", "Basketball", "Futsal", "Gateball", "Hocky", "Lawn Bowl", "Netball", "Petanque", "Pickle Ball", "Squash", "Table Tennis", "Tennis", "Tennis Wall", "Volleyball"};
+                CharSequence options[] = new CharSequence[] {"Badminton", "Basketball", "Futsal", "Gateball", "Hocky", "Lawn Bowl", "Netball", "Petanque", "Pickle Ball", "Squash", "Soccer", "Table Tennis", "Tennis", "Tennis Wall", "Volleyball"};
                 alertDialog(options, "Select Activity", textActivity);
+            }
+        });
+
+        textVenue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CharSequence options[] = new CharSequence[] {"Free Location", "Available Facility"};
+                alertLocationDialog(options, "Select Venue", textActivity);
             }
         });
 
@@ -116,6 +126,7 @@ public class JioNowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(JioNowActivity.this, ActivesgActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -134,14 +145,14 @@ public class JioNowActivity extends AppCompatActivity {
         linearLayout.addView(aNumberPicker,numPicerParams);
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(JioNowActivity.this);
-        alertDialogBuilder.setTitle("Select Min Pax");
+        alertDialogBuilder.setTitle(title);
         alertDialogBuilder.setView(linearLayout);
         alertDialogBuilder
                 .setCancelable(false)
                 .setPositiveButton("Ok",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                textView.setText(id);
+                                textView.setText(String.valueOf(aNumberPicker.getValue()));
                                 dialog.dismiss();
                             }
                         })
@@ -196,6 +207,22 @@ public class JioNowActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 textView.setText(options[which]);
+                dialog.dismiss();
+            }
+        });
+
+        builder.show();
+    }
+
+    private void alertLocationDialog(final CharSequence[] options, String title, final TextView textView) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //builder.setIcon(R.drawable.ic_);
+        builder.setTitle(title);
+        builder.setItems(options, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                CharSequence options[] = new CharSequence[] {"Toa Payoh SAFRA", "Bishan Sports Complex", "Ang Mo Kio Sports Hub"};
+                alertDialog(options, "Select Available Facility", textVenue);
                 dialog.dismiss();
             }
         });

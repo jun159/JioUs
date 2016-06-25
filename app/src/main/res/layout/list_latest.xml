@@ -43,8 +43,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="22dp"
@@ -57,14 +56,14 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:orientation="horizontal"
-                        android:weightSum="2">
+                        android:weightSum="3">
 
                         <TextView
                             android:id="@+id/text_location"
                             android:layout_width="0dp"
                             android:layout_height="25dp"
                             android:text="SAFRA TPY"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
 
@@ -77,6 +76,28 @@
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:gravity="center"
+                        android:background="@drawable/ic_event_available_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/text_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="25 June 2016, 1pm"
+                        android:layout_marginStart="5dp"
+                        android:gravity="left"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <LinearLayout

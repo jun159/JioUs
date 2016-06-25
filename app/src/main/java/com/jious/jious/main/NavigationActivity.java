@@ -16,8 +16,11 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.jious.jious.R;
+import com.jious.jious.attendance.AttendanceFragment;
+import com.jious.jious.badgebook.BadgebookFragment;
 import com.jious.jious.latestactivity.LatestFragment;
 import com.jious.jious.profile.ProfileActivity;
+import com.jious.jious.scoresystem.ScoreFragment;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,7 +32,7 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setElevation(0);
-        getSupportActionBar().setTitle("Latest Activities");
+        getSupportActionBar().setTitle("Home");
 
         toggleUser(toolbar);
 
@@ -102,25 +105,29 @@ public class NavigationActivity extends AppCompatActivity
 
         if (id == R.id.nav_jio) {
             fragment = new LatestFragment();
-            getSupportActionBar().setTitle("Latest Activities");
+            getSupportActionBar().setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.container, fragment);
             ft.commit();
-        }
-//        } else if (id == R.id.nav_profile) {
-//            fragment = new ProfileFragment();
-//            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//            ft.replace(R.id.container, fragment);
-//            ft.commit();
-//        } else if (id == R.id.nav_activities) {
-
-//        }
-
-        else if (id == R.id.nav_badgebook) {
-
-        } else if (id == R.id.nav_friends) {
-
+        } else if (id == R.id.nav_activities) {
+            fragment = new AttendanceFragment();
+            getSupportActionBar().setTitle("Activities");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.container, fragment);
+            ft.commit();
+        } else if (id == R.id.nav_badgebook) {
+            fragment = new BadgebookFragment();
+            getSupportActionBar().setTitle("Badge Book");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.container, fragment);
+            ft.commit();
         } else if (id == R.id.nav_create_game) {
+            fragment = new ScoreFragment();
+            getSupportActionBar().setTitle("Tutorial and Scoring");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.container, fragment);
+            ft.commit();
+        } else if (id == R.id.nav_friends) {
 
         } else if (id == R.id.nav_about) {
 

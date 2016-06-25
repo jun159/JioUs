@@ -56,6 +56,7 @@ public class PostalActivity extends Activity {
                 imageTpy.startAnimation(fadein);
                 imageMap.setVisibility(View.GONE);
                 imageTpy.setVisibility(View.VISIBLE);
+                editPostal.setText("310123");
                 textTown.setVisibility(View.VISIBLE);
                 buttonNext.setVisibility(View.VISIBLE);
             }
