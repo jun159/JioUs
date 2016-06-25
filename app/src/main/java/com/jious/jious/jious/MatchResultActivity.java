@@ -59,26 +59,22 @@ public class MatchResultActivity extends AppCompatActivity {
     private List<Event> getEventList() {
         List<Event> events = new ArrayList<>();
 
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
-        events.add(new Event("TOA PAYOH FOOTBALL TEAM", "SAFRA TPY", " 25 DEC 2016, SUNDAY, 2:00PM",
-                "James", 8, 12, 2, 3, false));
+        events.add(new Event("TOA PAYOH SOCCER TEAM", "BISHAN PARK SEC SCH     3.2km", " 26 JUN 2016, SUNDAY, 6:00PM",
+                "James Lee", 8, 12, 1, 1, false));
+        events.add(new Event("SPRING FIELD MATCH", "SAFRA TPY                  1.3km", " 29 JUN 2016, TUESDAY, 7:00PM",
+                "Ahmad Sathin", 8, 12, 2, 3, false));
+        events.add(new Event("TPY V.S AMK FRIENDS MATCH", "AMK ITE CENTRAL     6.5km ", " 02 JULY 2016, SATURDAY, 9:00AM",
+                "Lawrance Tee", 8, 12, 5, 6, false));
+        events.add(new Event("HAPPY TIONG BARU SOCCER", "REDHILL SEC SCH       12km", " 03 July 2016, SUNDAY, 2:00PM",
+                "Steve Jobs", 8, 12, 3, 7, false));
+        events.add(new Event("TOA PAYOH SOCCER TEAM", "BISHAN PARK SEC SCH     3.2km", " 26 JUN 2016, SUNDAY, 6:00PM",
+                "James Lee", 8, 12, 1, 1, false));
+        events.add(new Event("SPRING FIELD MATCH", "SAFRA TPY                  1.3km", " 29 JUN 2016, TUESDAY, 7:00PM",
+                "Ahmad Sathin", 8, 12, 2, 3, false));
+        events.add(new Event("TPY V.S AMK FRIENDS MATCH", "AMK ITE CENTRAL     6.5km ", " 02 JULY 2016, SATURDAY, 9:00AM",
+                "Lawrance Tee", 8, 12, 5, 6, false));
+        events.add(new Event("HAPPY TIONG BARU SOCCER", "REDHILL SEC SCH       12km", " 03 July 2016, SUNDAY, 2:00PM",
+                "Steve Jobs", 8, 12, 3, 7, false));
 
         return events;
     }
