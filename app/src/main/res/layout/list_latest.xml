@@ -32,6 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -41,7 +42,7 @@
                     android:textSize="17sp"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp">
 
@@ -51,15 +52,31 @@
                         android:gravity="center"
                         android:background="@drawable/ic_place_black_24dp"/>
 
-                    <TextView
-                        android:id="@+id/text_location"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:text="SAFRA TPY              1.6km away"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center"
-                        android:textSize="13sp"
-                        android:textColor="@android:color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/text_location"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="SAFRA TPY"
+                            android:layout_weight="1"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/text_km"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="1.6km away"
+                            android:layout_weight="1"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -156,7 +173,7 @@
 
                 <TextView
                     android:id="@+id/text_hostname"
-                    android:layout_width="70dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"

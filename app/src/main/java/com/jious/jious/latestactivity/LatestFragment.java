@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.jious.jious.R;
-import com.jious.jious.jio.JioActivity;
+import com.jious.jious.jionow.JioNowActivity;
 import com.jious.jious.jious.JioUsActivity;
 import com.jious.jious.objects.Event;
 
@@ -46,7 +46,7 @@ public class LatestFragment extends Fragment {
         buttonJio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), JioActivity.class);
+                Intent intent = new Intent(getActivity(), JioNowActivity.class);
                 getActivity().startActivity(intent);
             }
         });
@@ -68,7 +68,7 @@ public class LatestFragment extends Fragment {
 
         List<Event> eventList = getEventList();
         listView = (ListView) rootView.findViewById(android.R.id.list);
-        adapter = new LatestAdapter(getActivity(), R.layout.activity_list_latest, eventList);
+        adapter = new LatestAdapter(getActivity(), R.layout.activity_list_latest, eventList, false);
         listView.setAdapter(adapter);
 
         return rootView;
@@ -79,27 +79,27 @@ public class LatestFragment extends Fragment {
 
         Log.d("lol", "here");
 
-        events.add(new Event("TOA PAYOH SOCCER TEAM", "Bishan Park Sec Sch              1.6km away", " 27 JUN 2016, MONDAY, 7:00PM",
+        events.add(new Event("TOA PAYOH SOCCER TEAM", "Bishan Park Sec Sch", "1.6km away", " 27 JUN 2016, MONDAY, 7:00PM",
                 "Justin Wong", 8, 12, 1, 1, false));
-        events.add(new Event("TENNIS MASTER MATCH", " Bedok Tennis Court        16.9km away", " 28 JUN 2016, MONDAY, 10:00AM",
+        events.add(new Event("TENNIS MASTER MATCH", "Bedok Tennis Court", "16.9km away", " 28 JUN 2016, MONDAY, 10:00AM",
                 "Michelle Ng", 8, 12, 2, 2, false));
-        events.add(new Event("STORYBOOK READING - FINDING DORY ", "TPY Central Libaray     0.8km away", " 28 JUN 2016, MONDAY , 5:00PM",
+        events.add(new Event("STORYBOOK READING - FINDING DORY ", "TPY Central Libaray", "0.8km away", " 28 JUN 2016, MONDAY , 5:00PM",
                 "Andrew Lim", 8, 12, 4, 2, false));
-        events.add(new Event("TPY CC GATHERING", "SAFRA TPY              1.6km away", " 29 JUN 2016, TUESDAY, 5:00PM",
+        events.add(new Event("TPY CC GATHERING", "SAFRA TPY", "1.6km away", " 29 JUN 2016, TUESDAY, 5:00PM",
                 "Chin Chong", 8, 12, 7, 3, false));
-        events.add(new Event("YOGO NIGHT", "SAFRA OSIM ROOM              1.6km away", " 29 JUN 2016, TUESDAY, 6:00PM",
+        events.add(new Event("YOGO NIGHT", "SAFRA Osim Room", "1.6km away", " 29 JUN 2016, TUESDAY, 6:00PM",
                 "James Hang", 8, 12, 2, 3, false));
-        events.add(new Event("HAPPY TABLE - MAHJONG", "NOVENA CC HALL     3.6km away", " 30 JUN 2016, WEDNESDAY, 10:00AM",
+        events.add(new Event("HAPPY TABLE - MAHJONG", "Novena CC Hall", "3.6km away", " 30 JUN 2016, WEDNESDAY, 10:00AM",
                 "Jaslyn Yong", 8, 12, 1, 4, false));
-        events.add(new Event("TENNIS MASTER MATCH", " Bedok Tennis Court        16.9km away", " 28 JUN 2016, MONDAY, 10:00AM",
+        events.add(new Event("TENNIS MASTER MATCH", " Bedok Tennis Court", "16.9km away", " 28 JUN 2016, MONDAY, 10:00AM",
                 "Michelle Ng", 8, 12, 2, 2, false));
-        events.add(new Event("STORYBOOK READING - FINDING DORY ", "TPY Central Libaray     0.8km away", " 28 JUN 2016, MONDAY , 5:00PM",
+        events.add(new Event("STORYBOOK READING - FINDING DORY ", "TPY Central Libaray", "0.8km away", " 28 JUN 2016, MONDAY , 5:00PM",
                 "Andrew Lim", 8, 12, 4, 2, false));
-        events.add(new Event("TPY CC GATHERING", "SAFRA TPY              1.6km away", " 29 JUN 2016, TUESDAY, 5:00PM",
+        events.add(new Event("TPY CC GATHERING", "SAFRA TPY", "1.6km away", " 29 JUN 2016, TUESDAY, 5:00PM",
                 "Chin Chong", 8, 12, 7, 3, false));
-        events.add(new Event("YOGO NIGHT", "SAFRA OSIM ROOM              1.6km away", " 29 JUN 2016, TUESDAY, 6:00PM",
+        events.add(new Event("YOGO NIGHT", "SAFRA Osim Room", "1.6km away", " 29 JUN 2016, TUESDAY, 6:00PM",
                 "James Hang", 8, 12, 2, 3, false));
-        events.add(new Event("HAPPY TABLE - MAHJONG", "NOVENA CC HALL     3.6km away", " 30 JUN 2016, WEDNESDAY, 10:00AM",
+        events.add(new Event("HAPPY TABLE - MAHJONG", "Novena CC Hall", "3.6km away", " 30 JUN 2016, WEDNESDAY, 10:00AM",
                 "Jaslyn Yong", 8, 12, 1, 4, false));
 
 

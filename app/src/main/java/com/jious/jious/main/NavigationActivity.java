@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.jious.jious.R;
-import com.jious.jious.jio.JioFragment;
 import com.jious.jious.latestactivity.LatestFragment;
 import com.jious.jious.profile.ProfileActivity;
 
@@ -122,8 +121,6 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.nav_friends) {
 
         } else if (id == R.id.nav_create_game) {
-
-        } else if (id == R.id.nav_tutorial) {
 
         } else if (id == R.id.nav_about) {
 

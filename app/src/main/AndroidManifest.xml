@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".main.NavigationActivity"
+            android:name=".main.StartActivity"
             android:label="@null"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoToolBar">
@@ -36,19 +36,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
-        <!--<activity-->
-            <!--android:name=".main.NavigationActivity"-->
-            <!--android:label="Home"-->
-            <!--android:theme="@style/AppTheme.NoToolBar"/>-->
+        <activity
+            android:name=".main.NavigationActivity"
+            android:label="Home"
+            android:theme="@style/AppTheme.NoToolBar"/>
         <activity
             android:name=".profile.ProfileActivity"
             android:label="My Profile"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".jio.JioActivity"
-            android:label="Jio Now"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
@@ -60,13 +54,37 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".jious.JioUsActivity"
-            android:label="JioUs"
+            android:label="Jio Us"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />
         <activity
             android:name=".activity.EventActivity"
             android:label="Toa Payoh Football Match"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.MatchActivity"
+            android:label="Toa Payoh Football Match"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".jionow.JioNowActivity"
+            android:label="Jio Now"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".jionow.ActivesgActivity"
+            android:label="Booking"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".jionow.WebsiteActivity"
+            android:label="Booking"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop" />

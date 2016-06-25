@@ -90,14 +90,12 @@ public class JioUsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDateTimePicker(true, textDateFrom);
-                showDateTimePicker(false, textDateFrom);
             }
         });
 
         textDateTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDateTimePicker(true, textDateTo);
                 showDateTimePicker(false, textDateTo);
             }
         });
@@ -122,12 +120,11 @@ public class JioUsActivity extends AppCompatActivity {
                 calendar.set(year, monthOfYear, dayOfMonth);
                 if(isStart) {
                     startDate = DATEFORMATTER.format(calendar.getTime());
+                    textView.setText(startDate);
                 } else {
                     endDate = DATEFORMATTER.format(calendar.getTime());
+                    textView.setText(endDate);
                 }
-                String dateTime = "From    " + startDate + ", " + startTime
-                        + "\nTo         " + endDate + ", " + endTime;
-                textView.setText(dateTime);
                 new TimePickerDialog(JioUsActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -135,12 +132,11 @@ public class JioUsActivity extends AppCompatActivity {
                         calendar.set(Calendar.MINUTE, minute);
                         if(isStart) {
                             startTime = TIMEFORMATTER.format(calendar.getTime()).replaceAll("\\.", "");
+                            textView.setText(startDate + ", " + startTime);
                         } else {
                             endTime = TIMEFORMATTER.format(calendar.getTime()).replaceAll("\\.", "");
+                            textView.setText(endDate + ", " + endTime);
                         }
-                        String dateTime = "From    " + startDate + ", " + startTime
-                                + "\nTo         " + endDate + ", " + endTime;
-                        textView.setText(dateTime);
                     }
                 }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false).show();
             }
@@ -156,7 +152,7 @@ public class JioUsActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 1000);
     }
 
     private void alertDialog(final CharSequence[] options, String title, final TextView textView) {

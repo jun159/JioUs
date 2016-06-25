@@ -7,6 +7,7 @@ public class Event {
 
     private String title;
     private String location;
+    private String km;
     private String dateTime;
     private String host;
     private int minPax;
@@ -15,11 +16,12 @@ public class Event {
     private int currentDay;
     private boolean isLiked;
 
-    public Event(String title, String location, String dateTime,
+    public Event(String title, String location, String km, String dateTime,
                  String host, int minPax, int maxPax, int currentCount,
                  int currentDay, boolean isLiked) {
         this.title = title;
         this.location = location;
+        this.km = km;
         this.dateTime = dateTime;
         this.host = host;
         this.minPax = minPax;
@@ -47,6 +49,14 @@ public class Event {
 
     public String getDateTime() {
         return dateTime;
+    }
+
+    public String getKm() {
+        return km;
+    }
+
+    public void setKm(String km) {
+        this.km = km;
     }
 
     public void setDateTime(String dateTime) {

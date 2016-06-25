@@ -10,7 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,14 +127,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="55dp"
                 android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
@@ -166,7 +169,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
@@ -332,42 +335,43 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="left"
-            android:orientation="horizontal">
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button_match"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:textSize="17sp"
-                android:padding="10dp"
-                android:text="Join"
-                android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button_match"/>
+    <LinearLayout
+        android:id="@+id/join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:textSize="17sp"
-                android:padding="10dp"
-                android:text="Join"
-                android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button_match"/>
+        <Button
+            android:id="@+id/button_match"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:text="Join"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_match"/>
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/button_checkin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:text="Check in"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_grey"/>
 
     </LinearLayout>
 

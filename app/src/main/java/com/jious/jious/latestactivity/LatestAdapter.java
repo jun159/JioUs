@@ -1,6 +1,7 @@
 package com.jious.jious.latestactivity;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -10,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jious.jious.R;
 import com.jious.jious.activity.EventActivity;
+import com.jious.jious.activity.MatchActivity;
 import com.jious.jious.objects.Event;
 
 import java.util.List;
@@ -25,11 +28,13 @@ public class LatestAdapter extends ArrayAdapter<Event> {
 
     private List<Event> eventList;
     private Context context;
+    private boolean isAdded;
 
-    public LatestAdapter(Context context, int resource, List<Event> objects) {
+    public LatestAdapter(Context context, int resource, List<Event> objects, boolean isAdded) {
         super(context, resource, objects);
         this.context = context;
         this.eventList = objects;
+        this.isAdded = isAdded;
     }
 
     @Override
@@ -63,14 +68,14 @@ public class LatestAdapter extends ArrayAdapter<Event> {
 
         if(null != event) {
             final CardView rowLayout = (CardView) view.findViewById(R.id.row_layout);
-            final TextView buttonShare = (TextView) view.findViewById(R.id.button_share);
-            final TextView buttonLike = (TextView) view.findViewById(R.id.button_like);
+            final TextView textTitle = (TextView) view.findViewById(R.id.title);
             final TextView textLocation = (TextView) view.findViewById(R.id.text_location);
             final TextView textPlayer = (TextView) view.findViewById(R.id.text_player);
             final TextView textDay = (TextView) view.findViewById(R.id.text_days);
             final ImageView imageView = (ImageView) view.findViewById(R.id.image_host);
             final TextView textHost = (TextView) view.findViewById(R.id.text_hostname);
 
+            textTitle.setText(event.getTitle());
             textLocation.setText(event.getLocation());
             Log.d("lol", event.getLocation());
             textPlayer.setText(String.valueOf(event.getCurrentCount()));
@@ -80,22 +85,13 @@ public class LatestAdapter extends ArrayAdapter<Event> {
             rowLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, EventActivity.class);
-                    context.startActivity(intent);
-                }
-            });
-
-            buttonShare.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
-
-            buttonLike.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
+                    if(isAdded) {
+                        Intent intent = new Intent(context, MatchActivity.class);
+                        context.startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(context, EventActivity.class);
+                        context.startActivity(intent);
+                    }
                 }
             });
         }
