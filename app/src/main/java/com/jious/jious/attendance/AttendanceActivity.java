@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.jious.jious.R;
 import com.jious.jious.authentication.PostalActivity;
+import com.jious.jious.profile.ProfileActivity;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -30,6 +31,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class AttendanceActivity extends AppCompatActivity {
 
     private LinearLayout layout;
+    private CircleImageView imageMe;
     private Button buttonCheck;
     private CircleImageView imageView;
     private boolean isBumped;
@@ -45,6 +47,16 @@ public class AttendanceActivity extends AppCompatActivity {
         layout = (LinearLayout) findViewById(R.id.layout_front);
         buttonCheck = (Button) findViewById(R.id.button_checkin);
         imageView = (CircleImageView) findViewById(R.id.image);
+        imageMe = (CircleImageView) findViewById(R.id.imageme);
+
+        imageMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AttendanceActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
         layout.bringToFront();
         layout.setVisibility(View.GONE);
 

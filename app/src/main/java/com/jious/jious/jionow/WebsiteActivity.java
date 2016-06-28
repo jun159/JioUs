@@ -1,6 +1,7 @@
 package com.jious.jious.jionow;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,8 @@ public class WebsiteActivity extends AppCompatActivity {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(WebsiteActivity.this, "Venue booked successfully", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(WebsiteActivity.this, CreateActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

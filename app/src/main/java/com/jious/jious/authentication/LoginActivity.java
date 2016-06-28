@@ -1,14 +1,22 @@
 package com.jious.jious.authentication;
 
 import android.app.Dialog;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         setRegisterButton();
         setUsernameText();
         setPasswordText();
+        setNotification();
 //        setSaveLoginText();
     }
 
@@ -64,6 +73,32 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    public void setNotification() {
+        int notification_id = 1;
+
+        // TODO: Link user to notification fragment
+
+        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                R.drawable.justin_noborder);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+                .setContentTitle("Reminder")
+                .setContentText("You have a game starting in one hour.")
+                .setLights(Color.CYAN, 1000, 1000)
+                .setLargeIcon(icon)
+                .setSmallIcon(R.drawable.jiouslogo)
+                .setVibrate(new long[]{1000, 1000})
+                .setWhen(System.currentTimeMillis())
+                .setAutoCancel(true)
+                .setSound(alarmSound)
+                .setNumber(notification_id++)
+                .setPriority(Notification.PRIORITY_MIN);
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(notification_id, builder.build());
+    }
+
     public void timerDelayRemoveDialog(final Dialog d){
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -85,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     private void setPasswordText() {
         mPasswordView = (EditText) findViewById(R.id.password);
         setEditTextLine(mPasswordView);
-        mPasswordView.setText("justin");
+        mPasswordView.setText("justinnn");
     }
 
     private void setEditTextLine(EditText editText) {

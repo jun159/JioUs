@@ -81,15 +81,13 @@ public class LatestFragment extends Fragment {
 
         Log.d("lol", "here");
 
-        events.add(new Event(R.drawable.justin, "TOA PAYOH SOCCER TEAM", "Bishan Park Sec Sch", "1.6km away", " 27 Jun 2016, Monday, 7:00pm",
-                "Justin Wong", 8, 12, 1, 1, false));
-        events.add(new Event(R.drawable.profile_hdb, "TENNIS MASTER MATCH", "Bedok Tennis Court", "16.9km away", " 28 Jun 2016, Monday, 10:00am",
-                "Michelle Ng", 8, 12, 2, 2, false));
+        events.add(new Event(R.drawable.profile_1, "TOA PAYOH SOCCER TEAM", "Toa Payoh Sec Sch", "1.6km away", " 27 Jun 2016, Monday, 7:00pm",
+                "James Lee", 8, 12, 1, 1, false));
+        events.add(new Event(R.drawable.profile_hdb, "TENNIS MASTER MATCH", "Toa Payoh Tennis Court", "16.9km away", " 28 Jun 2016, Monday, 10:00am",
+                "Cheong Koon Hean", 8, 12, 2, 2, false));
         events.add(new Event(R.drawable.profile_kind, "STORYBOOK READING - FINDING DORY ", "TPY Central Libaray", "0.8km away", " 28 Jun 2016, Monday , 5:00pm",
-                "Andrew Lim", 8, 12, 4, 2, false));
-        events.add(new Event(R.drawable.profile_1, "TPY CC GATHERING", "SAFRA TPY", "1.6km away", " 29 Jun 2016, Tuesday, 5:00pm",
-                "Chin Chong", 8, 12, 7, 3, false));
-        events.add(new Event(R.drawable.justin, "YOGO NIGHT", "SAFRA Osim Room", "1.6km away", " 29 Jun 2016, Tuesday, 6:00pm",
+                "Dr William Wan", 8, 12, 4, 2, false));
+        events.add(new Event(R.drawable.justin, "YOGA NIGHT", "SAFRA Osim Room", "1.6km away", " 29 Jun 2016, Tuesday, 6:00pm",
                 "James Hang", 8, 12, 2, 3, false));
 
 

@@ -65,7 +65,7 @@ public class JioUsActivity extends AppCompatActivity {
         textCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence options[] = new CharSequence[] {"Sports", "Bla A", "Bla B"};
+                CharSequence options[] = new CharSequence[] {"Sports", "Board Games", "Music", "Dancing", "Family", "Volunteer and Charity"};
                 alertDialog(options, "Select Category", textCategory);
             }
         });

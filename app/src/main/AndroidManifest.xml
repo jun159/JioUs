@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -102,6 +102,12 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".attendance.AttendanceActivity"
+            android:label="Toa Payoh Soccer Match"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".jionow.CreateActivity"
             android:label="Toa Payoh Soccer Match"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

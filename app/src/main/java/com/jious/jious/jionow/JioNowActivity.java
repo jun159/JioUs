@@ -2,14 +2,20 @@ package com.jious.jious.jionow;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -72,7 +78,7 @@ public class JioNowActivity extends AppCompatActivity {
         textCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence options[] = new CharSequence[] {"Sports", "Board Games", "Music", "Dancing", "Family", "Volunteer and Charity", "Green Action"};
+                CharSequence options[] = new CharSequence[] {"Sports", "Board Games", "Music", "Dancing", "Family", "Volunteer and Charity"};
                 alertDialog(options, "Select Category", textCategory);
             }
         });
